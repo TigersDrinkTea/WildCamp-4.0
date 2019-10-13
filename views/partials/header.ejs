@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Camp</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Calligraffitti&display=swap" rel="stylesheet">
+        <link href="/stylesheet.css" rel="stylesheet">
+    </head>
+    <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top mb-4">
+        <a class="navbar-brand" href="/">Wild-Camp</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle active navbut" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <%if(!currentUser){%>
+        <a class="dropdown-item" href="/register">Create Account</a>
+          <div class="dropdown-divider"></div>
+           <a class="dropdown-item" href="/login">Log In</a>
+        <%}else{%>
+        <ul class="dropdown-item">
+        <li class="dropdown-item">Signed in as <%=currentUser.username%></li>  
+        </ul>
+          <a class="dropdown-item" href="/logout">Logout</a>
+        <%}%>
+        </div>
+      </li>
+                        <li class="nav-item active navbut">
+                                <a class="nav-link " href="/campgrounds">Campgrounds</a>
+                        </li>
+                        <li class="nav-item active navbut">
+                                <a class="nav-link" href="/campgrounds/new">Add Site</a>
+                        </li>
+                        <li class="nav-item active navbut">
+                                <a class="nav-link " href="/">Contact</a>
+                        </li>
+                         <li class="nav-item active navbut">
+                                <a class="nav-link " href="/administrator">Admin</a>
+                        </li>
+                
+        </div>
+</nav>
+
+<div class='container' >
+<%if(error && error.length>0){ %>
+<div class='alert alert-danger' role='alert' >
+       <h1><%=error%></h1> 
+       </div>
+<%}%>
+        
+        <%if(success && success.length>0){ %>
+
+ <div class='alert alert-success' role='alert' >
+       <h1><%=success%></h1> 
+</div>
+<%}%>
+</div>
+
+
+
+    

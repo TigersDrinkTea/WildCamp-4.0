@@ -1,0 +1,84 @@
+body {
+    color: goldenrod;
+    background-image: url('/images/garrett-parker-DlkF4-dbCOU-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#outer {
+    padding: 30px;
+}
+
+.inner-div {
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+img {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.navbut {
+    margin-left: 15px;
+}
+
+.wrapper {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    margin-left: 46%
+}
+
+#heading {
+    text-align: center;
+    font-size: 80px;
+    color: rgb(199, 150, 25)
+}
+
+.neat a {
+    text-decoration: none;
+    color: #ffffff
+}
+
+.intro {
+    margin-top: 40px;
+    color:rgb(241, 190, 58);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.text {
+    margin-top:50px;
+    background-color:rgba(14, 10, 10, 0.5) ;
+        
+}
+.intro h1 {
+    font-size: 4.5rem;
+    background-color:rgba(14, 10, 10, 0.5)
+}
+
+.intro h2 {
+
+    padding: 40px;
+    font-size: 2.5rem;
+}
+.intro h3{
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+}
+
+#quote {
+    margin-top: 140px;
+    font-family: 'Calligraffitti', cursive;
+    font-size: 55px;
+   display: inline-block;
+   
+   
+}
+.underline{
+    border-bottom: 3px solid currentColor;
+}
+
+.delete {
+    display: inline;
+}

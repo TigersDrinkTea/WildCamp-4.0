@@ -1,0 +1,42 @@
+<%include ../partials/header%>
+
+
+
+<div id='outer' class='container-fluid'>
+
+        <header class='jumbotron'>
+
+                <h1>Welcome to Wild-Camp</h1>
+                <p>Search a selection of the most exclusive Wild Camp Sites on the planet</p>
+                <p>
+                        <a class="btn btn-primary btn-lg" href="/campgrounds/new">Add A New Campground</a>
+                </p>
+
+        </header>
+
+       
+
+        <div class="row">
+                <% campground.forEach(function(camp){%>
+
+                <div class="col-md-3 col-sm-6">
+                        <div class="text-center">
+                                <img class="img-thumbnail rounded" src="<%= camp.image %>">
+                                <div class="caption">
+                                        <h4><%= camp.name %></h4>
+                                </div>
+                                <p>
+                                        <a href="/campgrounds/<%= camp._id%>" class="btn btn-primary" >More Info</a>
+                                </p>
+                        </div>
+
+                </div>
+
+                <%});%>
+        </div>
+
+
+
+
+</div>
+<%include ../partials/footer%>
